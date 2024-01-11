@@ -81,6 +81,7 @@ netVisual_individual(cellchat, signaling = pathways.show, pairLR.use = LR.show, 
 #(A) Bubble plot
 netVisual_bubble(cellchat, sources.use = 4, targets.use = c(5:11), remove.isolate = FALSE)
 netVisual_bubble(cellchat, sources.use = 4, targets.use = c(5:11), signaling = c("CCL","CXCL"), remove.isolate = FALSE)
+pairLR.use <- extractEnrichedLR(cellchat, signaling = c("CCL","CXCL","FGF"))
 netVisual_bubble(cellchat, sources.use = c(3,4), targets.use = c(5:8), pairLR.use = pairLR.use, remove.isolate = TRUE)
 netVisual_bubble(cellchat, targets.use = c("LC","Inflam. DC","cDC2","CD40LG+ TC"), pairLR.use = pairLR.use, 
                  remove.isolate = TRUE, sort.by.target = T)
